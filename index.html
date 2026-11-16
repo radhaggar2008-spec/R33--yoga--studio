@@ -135,10 +135,20 @@
           </div>
           <div class="col-lg-7">
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
-              <iframe 
-                src="https://google.com" 
-                title="Map showing location of R33 yoga studio" 
-                loading="lazy">
+                title="Location map for R33 yoga studio"
+                srcdoc="
+                  <style>
+                    body { margin: 0; font-family: sans-serif; background: #e8efe9; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #2C3531; text-align: center; }
+                    .pin { font-size: 42px; margin-bottom: 8px; }
+                    .title { font-weight: 700; font-size: 18px; color: #4A6B5D; }
+                    .sub { font-size: 13px; margin-top: 4px; color: #555; }
+                    .grid { position: absolute; inset: 0; background-image: linear-gradient(#cfdcd3 1px, transparent 1px), linear-gradient(90deg, #cfdcd3 1px, transparent 1px); background-size: 36px 36px; z-index: -1; }
+                  </style>
+                  <div class='grid'></div>
+                  <div class='pin'>📍</div>
+                  <div class='title'>R33 yoga studio</div>
+                  <div class='sub'>2nd Floor, Greenview Plaza, Sector 43 • Mon–Sat, 6:30 AM – 8:30 PM</div>
+                ">
               </iframe>
             </div>
           </div>
