@@ -1,0 +1,95 @@
+/* Custom Stylesheet for R33 yoga studio */
+:root {
+  --primary-sage: #4A6B5D;
+  --secondary-sand: #F4EFEA;
+  --accent-terracotta: #C86D51;
+  --dark-charcoal: #2C3531;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--secondary-sand);
+  color: var(--dark-charcoal);
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.custom-navbar {
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  color: var(--primary-sage) !important;
+  font-size: 1.4rem;
+}
+
+.bg-accent {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+}
+
+.btn-accent {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+  border: none;
+  /* CSS Transition Requirement */
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-accent:hover {
+  background-color: #b15b40;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary-custom {
+  border: 2px solid var(--primary-sage);
+  color: var(--primary-sage);
+  transition: all 0.25s ease;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: var(--primary-sage);
+  color: #FFFFFF;
+}
+
+.custom-table thead {
+  background-color: var(--primary-sage);
+  color: #FFFFFF;
+}
+
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+
+.custom-footer {
+  background-color: var(--primary-sage);
+}
+
+/* Media Query 1: Tablet Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section .d-flex {
+    justify-content: center;
+  }
+}
+
+/* Media Query 2: Small Mobile Adjustments */
+@media (max-width: 576px) {
+  .display-5 {
+    font-size: 1.9rem;
+  }
+  .custom-table th,
+  .custom-table td {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
