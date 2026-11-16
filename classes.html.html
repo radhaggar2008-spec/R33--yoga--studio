@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing & Trial Enquiry | R33 yoga studio</title>
+  <meta name="description" content="Calculate your yoga membership fee and submit a free trial class enquiry at R33 yoga studio." />
+  
+  <link href="https://jsdelivr.net" rel="stylesheet" />
+  <link href="https://googleapis.com" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm custom-navbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">R33 yoga studio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home & Timetable</a></li>
+            <li class="nav-item"><a class="nav-link active" href="classes.html">Pricing & Trial Booking</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <!-- Transparent Pricing Section -->
+      <section class="mb-5">
+        <div class="text-center mb-4">
+          <h1 class="fw-bold">Simple, Transparent Pricing</h1>
+          <p class="text-muted">No hidden registration fees. Start with a free introductory session at R33 yoga studio.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="card h-100 border-0 shadow-sm pricing-card p-3">
+              <div class="card-body">
+                <h2 class="h5 fw-bold">Single Drop-In</h2>
+                <p class="display-6 fw-bold my-3">₹500 <small class="fs-6 fw-normal text-muted">/ class</small></p>
+                <p class="text-muted">Ideal for travelers or busy schedules wanting flexible access to any single batch.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="card h-100 border-2 border-success shadow pricing-card p-3">
+              <div class="card-body">
+                <span class="badge bg-accent mb-2">Most Popular</span>
+                <h2 class="h5 fw-bold">Monthly Unlimited</h2>
+                <p class="display-6 fw-bold my-3">₹2,800 <small class="fs-6 fw-normal text-muted">/ month</small></p>
+                <p class="text-muted">Unlimited access to all Hatha, Vinyasa, and Pranayama classes Monday through Saturday.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="card h-100 border-0 shadow-sm pricing-card p-3">
+              <div class="card-body">
+                <h2 class="h5 fw-bold">Quarterly Transformation</h2>
+                <p class="display-6 fw-bold my-3">₹7,200 <small class="fs-6 fw-normal text-muted">/ 3 months</small></p>
+                <p class="text-muted">Includes unlimited classes plus one 1-on-1 posture assessment every month.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Fee Estimator & Enquiry Form -->
+      <section class="row g-4">
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm p-4 rounded-4">
+            <h2 class="h4 fw-bold mb-3">Fee Estimator & Trial Enquiry Form</h2>
+            <p class="text-muted small mb-4">Estimate your plan cost instantly and submit your details to reserve a free trial class at R33 yoga studio.</p>
+
+            <form id="enquiryForm" novalidate>
+              <!-- Input Type 1: text -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label fw-semibold">Full Name *</label>
+                <input type="text" class="form-control" id="fullName" placeholder="e.g., Rohan Sharma" required />
+              </div>
+
+              <div class="row g-3 mb-3">
+                <!-- Input Type 2: email -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-semibold">Email Address *</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                </div>
+                <!-- Input Type 3: tel -->
+                <div class="col-md-6">
+                  <label for="phone" class="form-label fw-semibold">Phone Number (10 digits) *</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="9876543210" required />
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <!-- Input Type 4: date -->
+                <div class="col-md-6">
+                  <label for="trialDate" class="form-label fw-semibold">Preferred Trial Date *</label>
+                  <input type="date" class="form-control" id="trialDate" required />
+                </div>
+                <!-- Select Dropdown for Fee Calculation -->
+                <div class="col-md-6">
+                  <label for="planSelect" class="form-label fw-semibold">Membership Plan *</label>
+                  <select class="form-select" id="planSelect">
+                    <option value="500" data-name="Single Drop-In">Single Drop-In (₹500)</option>
+                    <option value="2800" data-name="Monthly Unlimited" selected>Monthly Unlimited (₹2,800)</option>
+                    <option value="7200" data-name="Quarterly Transformation">Quarterly Transformation (₹7,200)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Input Type 5: radio -->
+              <fieldset class="mb-3">
+                <legend class="form-label fw-semibold fs-6">Experience Level</legend>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="experience" id="expBeginner" value="Beginner" checked />
+                  <label class="form-check-label" for="expBeginner">Beginner</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="experience" id="expIntermediate" value="Intermediate" />
+                  <label class="form-check-label" for="expIntermediate">Intermediate</label>
+                </div>
+              </fieldset>
+
+              <!-- Input Type 6: checkbox -->
+              <div class="mb-4">
+                <span class="form-label fw-semibold d-block">Optional Add-Ons</span>
+                <div class="form-check">
+                  <input class="form-check-input addon-check" type="checkbox" value="300" id="matRental" />
+                  <label class="form-check-label" for="matRental">Studio Mat & Towel Rental (+₹300)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input addon-check" type="checkbox" value="800" id="privateConsult" />
+                  <label class="form-check-label" for="privateConsult">1-on-1 Posture & Breathwork Consult (+₹800)</label>
+                </div>
+              </div>
+
+              <!-- Dynamic Fee Output Box -->
+              <div class="alert alert-secondary d-flex justify-content-between align-items-center mb-4">
+                <span>Estimated Plan Total (First Trial Session Free):</span>
+                <strong class="fs-5 text-dark" id="estimatedTotal">₹2,800</strong>
+              </div>
+
+              <div id="formFeedback" class="mb-3" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-accent w-100 py-2 fw-semibold">Confirm Trial & Save Estimate</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Saved Enquiries Panel -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h5 fw-bold mb-0">Your Saved Enquiries</h2>
+              <button type="button" id="clearHistoryBtn" class="btn btn-sm btn-outline-danger">Clear</button>
+            </div>
+            <p class="text-muted small">Saved automatically in your browser so you never lose your selected batch or quote.</p>
+            <div id="savedEnquiriesList" class="d-flex flex-column gap-3">
+              <!-- Populated dynamically via script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 text-center text-white custom-footer mt-5">
+    <div class="container">
+      <p class="mb-0">R33 yoga studio — Roll No. 33 Case Study</p>
+    </div>
+  </footer>
+
+  <script src="https://jsdelivr.net"></script>
+  <script src="script.js"></script>
+</body>
+</html>
